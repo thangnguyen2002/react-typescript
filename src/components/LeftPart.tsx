@@ -1,4 +1,7 @@
 import logoDesktop from "@/assets/img/logo/desktop-logo.png"
+import { FiGithub } from "react-icons/fi";
+import { ImFacebook } from "react-icons/im";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const LeftPart = () => {
     return (
@@ -13,15 +16,28 @@ const LeftPart = () => {
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Skills</a></li>
                         <li><a href="#project">Projects</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div className="leftpart_bottom">
                     <div className="social_wrap">
                         <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100051945932057"><i className="xcon-facebook"></i></a></li>
-                            <li><a href="https://www.linkedin.com/in/nguy%E1%BB%85n-%C4%91%E1%BB%A9c-th%E1%BA%AFng-63a758214/"><i className="xcon-linkedin"></i></a></li>
-                            <li><a href="https://www.instagram.com/martyy_2023/"><i className="xcon-instagram"></i></a></li>
+                            <li>
+                                <a href="https://www.facebook.com/profile.php?id=100051945932057">
+                                    {/* <i className="xcon-facebook"></i> */}
+                                    <ImFacebook />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-%C4%91%E1%BB%A9c-th%E1%BA%AFng-63a758214/">
+                                    <FiGithub />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/thangnguyen2002">
+                                    <FaLinkedinIn />
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
