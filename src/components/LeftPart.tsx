@@ -2,10 +2,16 @@ import logoDesktop from "@/assets/img/logo/desktop-logo.png"
 import { FiGithub } from "react-icons/fi";
 import { ImFacebook } from "react-icons/im";
 import { FaLinkedinIn } from "react-icons/fa";
+interface IProps {
+    hideLeftPart: boolean
+    setHideLeftPart: (value: boolean) => void
+}
 
-const LeftPart = () => {
+const LeftPart = (props: IProps) => {
+    let { hideLeftPart, setHideLeftPart } = props
+
     return (
-        <div className="arlo_tm_leftpart_wrap">
+        <div className={hideLeftPart ? "arlo_tm_leftpart_wrap opened" : "arlo_tm_leftpart_wrap"}>
             <div className="leftpart_inner">
                 <div className="logo_wrap">
                     <a href="#"><img src={logoDesktop} alt="desktop-logo" className="round-img" /></a>
@@ -41,7 +47,9 @@ const LeftPart = () => {
                         </ul>
                     </div>
                 </div>
-                <a className="arlo_tm_resize" href="#"><i className="xcon-angle-left"></i></a>
+                <a className={hideLeftPart ? "arlo_tm_resize opened" : "arlo_tm_resize"} href="#" onClick={() => setHideLeftPart(!hideLeftPart)}>
+                    <i className={hideLeftPart ? "xcon-angle-left opened" : "xcon-angle-left"}></i>
+                </a>
             </div>
         </div>
     );

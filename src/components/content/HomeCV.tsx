@@ -2,6 +2,15 @@ import { TypeAnimation } from 'react-type-animation';
 import avatar from "@/assets/img/hero/img1.jpg"
 
 const HomeCV = () => {
+    const handleScrollToAbout = () => {
+        const section = document.querySelector('#about');
+        // console.log('>>>about section: ', section);
+        if (section) {
+            // alert('me')
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    };
+
     return (
         <div className="arlo_tm_section" id="home">
             <div className="arlo_tm_hero_header_wrap">
@@ -42,7 +51,13 @@ const HomeCV = () => {
                         </div>
                     </div>
                     <div className="arlo_tm_arrow_wrap bounce anchor">
-                        <a href="#about"><i className="xcon-angle-double-down"></i></a>
+                        <a href="#"
+                            onClick={(e) => {
+                                e.preventDefault() //do scrollIntoView nen can preventDefault
+                                handleScrollToAbout()
+                            }}>
+                            <i className="xcon-angle-double-down"></i>
+                        </a>
                     </div>
                 </div>
             </div>
