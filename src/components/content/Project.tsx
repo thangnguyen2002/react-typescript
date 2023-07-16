@@ -97,7 +97,7 @@ const Project = () => {
     }
 
     return (
-        <div className="arlo_tm_section" id="project">
+        <div className="arlo_tm_section" id="project" style={{ paddingTop: 100 }}>
             <Modal title={dataDetail && dataDetail.title ? `Dự án ${dataDetail.title}` : ''} open={isModalOpen}
                 footer={null}
                 maskClosable={false}

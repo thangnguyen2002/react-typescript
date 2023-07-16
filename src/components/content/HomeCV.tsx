@@ -7,7 +7,7 @@ const HomeCV = () => {
         // console.log('>>>about section: ', section);
         if (section) {
             // alert('me')
-            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' }); //scroll smoother
         }
     };
 

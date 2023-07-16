@@ -3,10 +3,17 @@ import RightPart from "@/components/RightPart";
 import MobileMenu from "components/mobile/MobileMenu";
 import Preloader from "components/Preloader";
 import { FloatButton } from 'antd';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { isMobile } from 'react-device-detect';
 
 const Portfolio = () => {
-    const [hideLeftPart, setHideLeftPart] = useState<boolean>(true)
+    const [hideLeftPart, setHideLeftPart] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (isMobile) {
+            setHideLeftPart(true)
+        }
+    }, [isMobile])
 
     return (
         <>
